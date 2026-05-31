@@ -24,7 +24,6 @@ add_executable(
 target_link_libraries(
 	zerocopy 
 	PRIVATE 
-		core 
 		messages 
 		pipeline
 )
