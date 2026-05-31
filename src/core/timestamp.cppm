@@ -3,4 +3,4 @@ module;
 
 export module Timestamp;
 
-export using Timestamp = std::chrono::system_clock::time_point;
+export using Timestamp = std::chrono::steady_clock::time_point;

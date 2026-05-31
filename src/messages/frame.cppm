@@ -1,5 +1,6 @@
 module;
-#include <span>
+#include <vector>
+#include <memory>
 #include <cstdint>
 
 export module Frame;
@@ -10,7 +11,7 @@ export struct Frame
 {	
 	Timestamp timestamp;
 
-	std::span<uint8_t> data;
+	std::shared_ptr<std::vector<uint8_t>> buffer;
 	int width;
 	int height;
 };

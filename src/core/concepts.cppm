@@ -1,7 +1,14 @@
+module;
+#include <concepts>
+
 export module Concepts;
 
+import Timestamp;
+
 export template<typename T>
-concept Message = requires(T msg) 
+concept Message = 
+std::movable<T> &&
+requires(T msg) 
 {
-	msg.timestamp;
+	{ msg.timestamp } -> std::convertible_to<Timestamp>;
 };
