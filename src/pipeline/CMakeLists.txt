@@ -7,6 +7,6 @@ target_sources(pipeline
 )
 
 target_link_libraries(pipeline
-	PUBLIC
-		messages
+	PRIVATE
+		core
 )
