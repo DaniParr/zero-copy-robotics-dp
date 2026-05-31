@@ -1,6 +1,5 @@
 module;
-#include <iostream>
-#include <string>
+#include <cstdio>
 #include <typeinfo>
 
 export module Pipeline;
@@ -12,6 +11,6 @@ export class Pipeline {
 		Pipeline() {};
 
 		void publish(Message auto const& msg) {
-			std::cout << "Publishing " << typeid(msg).name() << " message." << std::endl; 		
+			std::printf("Publishing %s message.\n", typeid(msg).name());
 		}
 };
